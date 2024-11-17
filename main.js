@@ -75,11 +75,20 @@ console.log(mult);
 // 9. შექმენით ობიექტების მასივი, სადაც თითოეულ ობიექტში არის სტუდენტის სახელი და ქულა. 
 // map მეთოდით მიიღეთ ახალი მასივი მხოლოდ სტუდენტების სახელებით.
 
-// let studentsandgrades = [name:"vako", 11 , "giorgi" , 22 , "gabro" , 15]
+let studentsandgrades = [
+    { name: "vako", score: 85 },
+    { name: "gabro", score: 76 },
+    { name: "giorgi", score: 88 },
+]
 
-// vergavige es
+let studentsname1 = studentsandgrades.map((stundent) => {
+    stundent = stundent.name
+    console.log(stundent);
+})
 
-// let onlynames = studentsandgrades.map()
+
+
+
 
 // 10. შექმენით რიცხვების მასივი და map მეთოდით მიიღეთ მასივი, რომელშიც ყველა ლუწი რიცხვი გაორმაგებულია,
 //  ხოლო კენტი არ შეცვლილა.
@@ -126,22 +135,21 @@ negativenumbers.filter((Positive) => {
 // 14. შექმენით ობიექტების მასივი, სადაც თითოეულ ობიექტში არის პროდუქტების სახელები და ფასები. 
 // filter მეთოდით მიიღეთ მხოლოდ ის პროდუქტები, რომელთა ფასი 100-ზე მეტია.
 
-let prod = [{name: "apple" , price: 55} , {name: "bannana" , price: 101} , {name: "orage" , price: 155}]
+let prod = [
+    {name: "apple" , price: 55} ,
+     {name: "bannana" , price: 101} , 
+     {name: "orage" , price: 155}
+]
 
-prod.filter((prodprice) => {
-         prodprice > 100
-        // verc es ver gavige
-        console.log(prodprice);
-    })
+let over100 = prod.filter(prodover100 => prodover100.price > 100)
+
+console.log(over100);
     
 // 15. შექმენით რიცხვების მასივი და filter მეთოდით მიიღეთ ყველა რიცხვი, რომელიც 50-ს აღემატება.
 
-// 16. დაწერეთ კოდი, რომელიც while ციკლით 1-დან 10-მდე რიცხვებს დაბეჭდავს.
+let over50 = [10 , 20 , 50 , 100 , 200 , 150 , 1000]
 
-// 17. დაწერეთ პროგრამა, რომელიც while ციკლით მასივში არსებული რიცხვების ჯამს გამოიანგარიშებს.
+let filter50 = over50.filter(numbers => numbers > 50)
 
-// 18. შექმენით ცვლადი რიცხვით 1 და while ციკლით იმატეთ 2-ით, სანამ რიცხვი არ მიაღწევს 20-ს.
+console.log(filter50);
 
-// 19. დაწერეთ პროგრამა, რომელიც while ციკლით რიცხვებს დაბეჭდავს 20-დან 10-მდე დაღმავალი თანმიმდევრობით.
-
-// 20. დაწერეთ პროგრამა, რომელიც while ციკლით მასივში ყველა ობიექტს გამოიკვლევს და თითოეული მათგანის სახელს დაბეჭდავს.
